@@ -80,8 +80,29 @@ Consider N=4 points as shown in Figure 1 (a). The distances between each pair of
 
 **Figure 1 (b)**
 
-The possible pairing of points are given in Figures 2 (a) to 2 (c). 
+The possible pairing of points are given in Figures 2 (a) to 2 (c).
 
+
+<img src="images/sol1.png">
+
+
+
+**Figure 2 (a)**: *L=7.2*
+
+
+
+<img src="images/sol2.png">
+
+
+
+**Figure 2 (b)**: *L=12.8*
+
+
+<img src="images/sol3.png">
+
+
+
+**Figure 2 (c)**: *L=14.6*
 
 The total length of the paired links (\( L=\sum\limits_{i\lt j}d_{ij}n_{ij} \)) are 7.2, 12.8 and 14.6, respectively.
 
