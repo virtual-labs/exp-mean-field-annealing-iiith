@@ -68,7 +68,7 @@ Given a set of N points along with the distances between each pair of points, fi
 Consider N=4 points as shown in Figure 1 (a). The distances between each pair of points is given in Figure 1 (b).
 
 
-<img src="images/sol1.png" style="height:40; width:25">
+<img src="images/sol1.png" style="height:20; width:5">
 
 
 **Figure 1 (a)**
