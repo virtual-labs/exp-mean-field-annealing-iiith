@@ -2,27 +2,27 @@
 One of the most successful applications of neural network principles is in solving optimization problems. There are many situations where a problem can be formulated as minimization or maximization of some cost function or objective function subject to certain constraints. It is possible to map such a problem onto a feedback network,  where the units and connection strengths are identifi
 ed by comparing the cost function of the problem with the energy function of the network expressed in terms of the state values of the units and the connection strengths. The solution to the problem lies in determining the state of the network at the global minimum of the energy function. In this process, it is necessary to overcome the local minima of the energy function. This is accomplished by adopting a simulated annealing schedule for implementing the search for global minimum [Kirkpatric et al,1983].
 
-The solution to an optimization problem by neural networks consists of the following steps:
-(a) Express the objective function or the cost function and the constraints of the given problem in terms of the variables of the problem:
+The solution to an optimization problem by neural networks consists of the following steps:<br>
+  (a) Express the objective function or the cost function and the constraints of the given problem in terms of the variables of the problem:<br>
     \(Objective\) \(function ~ (E)\) \(:\) \(cost+global~constraints\)
 
-(b) Compare the objective function in above equation with the energy function (given in equation below) of a feedback neural network of Hopfield type to identify the states and the weights of the network in terms of variables and parameters appearing in the objective function.
+  (b) Compare the objective function in above equation with the energy function (given in equation below) of a feedback neural network of Hopfield type to identify the states and the weights of the network in terms of variables and parameters appearing in the objective function.
 
     \(Energy\) \(function: E = -\frac{1}{2}\sum\limits_{i\ne j} w_{ij}s_is_j \qquad(1) \)
 
     \(w_{ij}\) : weight connecting unit \(j\) to unit \(i\)
 
-    \(s_i, s_j\) : state values
+    \(s_i, s_j\) : state values <br>
 
-(c) The solution to the optimization problem consists of determining the state corresponding to the global minimum of the energy function of the network. Assuming bipolar states for each unit, the dynamics of the network can be expressed as
+  (c) The solution to the optimization problem consists of determining the state corresponding to the global minimum of the energy function of the network. Assuming bipolar states for each unit, the dynamics of the network can be expressed as
 
     \(s_i(t+ 1) = sgn(\sum\limits_{j\ne i}w_{ij}s_j(t))\) , for \(i=1,2, .. ,N \qquad(2)\)
 
     where \(N\) is the number of units in the network.
 
-(d) Direct application of the above dynamics in search of a stable state may lead to a state corresponding to a local minimum of the energy function. In order to reach the global minimum, passing by the local minima, the concept of stochastic update is used in the activation dynamics of the network. And for a stochastic update the state of the unit is updated using a probability law, which is controlled by a temperature parameter (T). At low temperatures, the stochastic update approaches the deterministic update, which is dictated by the output function of the unit.
+  (d) Direct application of the above dynamics in search of a stable state may lead to a state corresponding to a local minimum of the energy function. In order to reach the global minimum, passing by the local minima, the concept of stochastic update is used in the activation dynamics of the network. And for a stochastic update the state of the unit is updated using a probability law, which is controlled by a temperature parameter (T). At low temperatures, the stochastic update approaches the deterministic update, which is dictated by the output function of the unit.
 
-(e) The state of a neural network with stochastic update is described in terms of a probability distribution. The probability distributions of the states at thermal equilibrium follow the Boltzmann-Gibb's law , namely
+  (e) The state of a neural network with stochastic update is described in terms of a probability distribution. The probability distributions of the states at thermal equilibrium follow the Boltzmann-Gibb's law , namely
 
     \(P(s_\alpha)=(1/Z)e^{-E_\alpha /T} \qquad(3)\)
 
@@ -34,8 +34,8 @@ The solution to an optimization problem by neural networks consists of the follo
 
     \(s^{av} = \sum\limits_{\alpha} s_\alpha P(s_\alpha) \qquad(5)\)
 
-(f) At higher temperatures many states are likely to be visited, irrespective of the energies of those states. Thus the local minima of the energy function can be escaped. As the temperature is gradually reduced, the states having lower energies will be visited more frequently. Finally, at T = 0, the state with the lowest energy will have the highest probability. Thus the state corresponding to the global minimum of the energy function can be reached, escaping the local minima. This method of search for the global minimum of the energy function is called simulated annealing. Implementation of simulated annealing requires computation of stationary probabilities at thermal equilibrium for each temperature in the annealing schedule. Moreover, the convergence to the global minimum is guaranteed only if the temperature parameter is reduced slowly starting from a high value initially [Geman and Geman, 1984]. The probabilities of the states are computed by collecting the distribution of the states after a large number of cycles of updates of the states of the network at a given temperature. The cycles are repeated until the probabilities of states do not change substantially for different sets of cycles. Once thermal equilibrium is reached, the temperature is changed to the next lower value. Thus the process of implementation of simulated annealing is very slow.
-(g) In order to speed up the process of simulated annealing, the mean-field annealing approximation is used [Peterson and Anderson, 1987], in which the stochastic update of the binary/bipolar units is replaced by deterministic analog states [Glauber, 1963]. The basic idea of mean-field approximation is to replace the fluctuating activation values of each unit by its average value. That is \(x_i\) is replaced by \(x^{av}\).
+  (f) At higher temperatures many states are likely to be visited, irrespective of the energies of those states. Thus the local minima of the energy function can be escaped. As the temperature is gradually reduced, the states having lower energies will be visited more frequently. Finally, at T = 0, the state with the lowest energy will have the highest probability. Thus the state corresponding to the global minimum of the energy function can be reached, escaping the local minima. This method of search for the global minimum of the energy function is called simulated annealing. Implementation of simulated annealing requires computation of stationary probabilities at thermal equilibrium for each temperature in the annealing schedule. Moreover, the convergence to the global minimum is guaranteed only if the temperature parameter is reduced slowly starting from a high value initially [Geman and Geman, 1984]. The probabilities of the states are computed by collecting the distribution of the states after a large number of cycles of updates of the states of the network at a given temperature. The cycles are repeated until the probabilities of states do not change substantially for different sets of cycles. Once thermal equilibrium is reached, the temperature is changed to the next lower value. Thus the process of implementation of simulated annealing is very slow.
+  (g) In order to speed up the process of simulated annealing, the mean-field annealing approximation is used [Peterson and Anderson, 1987], in which the stochastic update of the binary/bipolar units is replaced by deterministic analog states [Glauber, 1963]. The basic idea of mean-field approximation is to replace the fluctuating activation values of each unit by its average value. That is \(x_i\) is replaced by \(x^{av}\).
 
     \(x^{av} = (\sum\limits_{j} w_{ij}s_j)^{av}\) \(=\) \(\sum\limits_{j}w_{ij}s_j^{av} \qquad(6)\)
 
