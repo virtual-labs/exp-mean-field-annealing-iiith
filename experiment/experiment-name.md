@@ -1,1 +1,1 @@
-## Deterministic, stochastic and mean-field annealing of Hopfield models
+## Deterministic, Stochastic and Mean-field Annealing of Hopfield Models
