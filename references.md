@@ -1,0 +1,11 @@
+- B. Yegnanarayana, Artificial Neural Networks, New Delhi, India : Prentice-Hall of India, p. 293, 1999.
+- C. Peterson and B. Soderberg, "Neural optimization", in The Handbook of Brain Theory and Neural Networks (M.A. Arbib, ed.), Cambridge, MA: MIT Press, pp. 617-621, 1995.
+- J.A. Hertz, A. Krogh, and R.G. Palmer, Introduction to the Theory of Neural Computation, New York: Addison-Wesley, 1991.
+- B. Muller and J. Reinhardt, Neural Networks: An Introduction, Physics of Neural Networks, New York: Springer-Verlag, 1991.
+- A.L. Yuille, "Constrained optimization and the elastic net", in The Handbook of Brain Theory and Neural Networks (M.A. Arbib, ed.), Cambridge, MA. MIT Press, pp. 250-255, 1995.
+- S. Geman and D. Geman, "Stochastic relaxation, Gibbs distributions, and the Bayesian restoration of images", IEEE Trans. Pattern Analysis and Machine Intelligence, vol. 6, pp. 721-741, 1984.
+- N. Metropolis, A.W. Rosenbluth, M.N. Rosenbluth, A.H. Teller, and E. Teller, "Equation of state calculations by fast computing machines", J. Chem. Phy., vol. 21, no. 6, pp. 1087-1092, 1953.
+- C. Peterson and J.R. Anderson, "A mean field theory learning algorithm for neural networks", Complex Systems, .vol. 1, pp. 995-1019, 1987.
+- R.J. Glauber, "Time-dependent statistics of the Ising model", J. Math. Phys., vol. 4, pp. 294-307, 1963.
+- S. Haykin, Neural Networks: A Comprehensive Foundation, New York: Macmillan College Publishing Company Inc., 1994.
+

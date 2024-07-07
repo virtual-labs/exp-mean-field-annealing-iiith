@@ -1,0 +1,22 @@
+
+/home/runner/work/exp-mean-field-annealing-iiith/exp-mean-field-annealing-iiith/experiment/simulation/exp.js
+   9:10  warning  'jsinit' is defined but never used         no-unused-vars
+  13:10  warning  'jsanneal' is defined but never used       no-unused-vars
+  19:10  warning  'jsreset' is defined but never used        no-unused-vars
+  23:5   warning  '$' is not defined                         no-undef
+  26:10  warning  'jschangegraph' is defined but never used  no-unused-vars
+
+/home/runner/work/exp-mean-field-annealing-iiith/exp-mean-field-annealing-iiith/experiment/simulation/js/utils.js
+    5:17  warning  '$' is not defined               no-undef
+   13:3   warning  '$' is not defined               no-undef
+   14:10  warning  'SERVER' is not defined          no-undef
+   22:38  warning  'xhr' is defined but never used  no-unused-vars
+   29:27  warning  '$' is not defined               no-undef
+   76:7   warning  '$' is not defined               no-undef
+   77:12  warning  'SERVER' is not defined          no-undef
+   78:10  warning  'success' is not defined         no-undef
+   94:5   warning  '$' is not defined               no-undef
+  102:1   warning  '$' is not defined               no-undef
+
+✖ 15 problems (0 errors, 15 warnings)
+
