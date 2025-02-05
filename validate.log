@@ -1,0 +1,11 @@
+{
+  _: [],
+  f: [
+    '/home/runner/work/exp-mean-field-annealing-iiith/exp-mean-field-annealing-iiith/experiment-descriptor.json'
+  ],
+  files: [
+    '/home/runner/work/exp-mean-field-annealing-iiith/exp-mean-field-annealing-iiith/experiment-descriptor.json'
+  ],
+  '$0': 'validate'
+}
+Validated true
