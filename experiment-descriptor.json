@@ -2,6 +2,7 @@
   "unit-type": "lu",
   "label": "",
   "basedir": ".",
+  "services": ["VLAB_SVC_OCTAVE_ANN"],
   "units": [
     {
       "unit-type": "aim"
@@ -13,7 +14,7 @@
       "unit-type": "task",
       "content-type": "text"
     },
-   
+
     {
       "target": "procedure.html",
       "source": "procedure.md",
@@ -26,9 +27,14 @@
       "source": "simulation/index.html",
       "label": "Simulation",
       "unit-type": "task",
+      "additional-sources": [
+        "simulation/weightedmatching_det.html",
+        "simulation/weightedmatching_mean.html",
+        "simulation/weightedmatching_sto.html"
+      ],
       "content-type": "simulation"
     },
-	{
+    {
       "target": "observations.html",
       "source": "observations.md",
       "label": "Observations",
@@ -42,7 +48,7 @@
       "unit-type": "task",
       "content-type": "text"
     },
-    
+
     {
       "target": "references.html",
       "source": "references.md",

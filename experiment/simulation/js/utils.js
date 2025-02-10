@@ -1,7 +1,8 @@
-window.SERVER =
-  "svc-test.vlabs.ac.in/octave-ann";
+// window.SERVER =
+//   "svc-test.vlabs.ac.in/octave-ann";
 
 function submitForm() {
+  const SERVER = window.vlabsConfig.service["VLAB_SVC_OCTAVE_ANN"];
   const $form = $('form[name="myform"]');
 
   let args = $form.serializeArray().reduce((prev, cur) => {
@@ -11,7 +12,7 @@ function submitForm() {
   if (window.extraArgs) args = { ...args, ...window.extraArgs() };
 
   $.ajax({
-    url: SERVER + "/exp-" + window.EXP_NAME,
+    url: SERVER.url + "/exp-" + window.EXP_NAME,
     type: "POST",
     headers: {
       token: localStorage.getItem("token"),
@@ -71,10 +72,11 @@ function appendOptions(elm, list) {
 }
 
 function onload() {
+  const SERVER = window.vlabsConfig.service["VLAB_SVC_OCTAVE_ANN"];
   if (document.readyState === "complete") {
     if (!localStorage.getItem("token")) {
       $.get(
-        `${SERVER}/get_token`,
+        `${SERVER.url}/get_token`,
         (success = function (data) {
           localStorage.setItem("token", data);
         })
